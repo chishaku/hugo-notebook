@@ -3,6 +3,10 @@ config:                     "config.yaml"
 title:    Notebook
 baseurl:  http://<github-user>.github.io/notebook
 
+params:
+  navigation: 
+    # ['path', 'Title']
+
 taxonomies:
   tag:    "tags"
 
@@ -27,7 +31,6 @@ buildFuture:                false
 # enable this to make all relative URLs relative to content root. Note that this does not affect absolute URLs.
 relativeURLs:               false
 canonifyURLs:               false
-# config file (default is path/config.yaml|json|toml)
 defaultExtension:           "html"
 defaultLayout:              "post"
 disableLiveReload:          false
@@ -60,7 +63,7 @@ paginate:                   10
 paginatePath:               "page"
 permalinks:
 # Pluralize titles in lists using inflect
-pluralizeListTitles:        true
+pluralizeListTitles:        false
 # Preserve special characters in taxonomy names ("Gérard Depardieu" vs "Gerard Depardieu")
 preserveTaxonomyNames:      false
 # filesystem path to write files to
